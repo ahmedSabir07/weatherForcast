@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="bg-gradient-to-b from-gray-800 to-gray-700 text-white font-sans">
+    <!-- Wrapper with rounded corners -->
+    <div class="flex justify-center items-center h-screen">
+        <div class="phone-box bg-sky-800 rounded-lg p-8">
+            <!-- Weather App Container -->
+            <div class="call w-full max-w-md mx-auto mt-10 flex flex-col items-center">
+                <!-- Search Input Section -->
+                <div class="search w-full flex items-center justify-between mb-4 ">
+                    <input type="text" id="cityInput" placeholder="Enter city name" spellcheck="false" class="bg-gray-600 text-white py-2 px-4 rounded-lg flex-1 mr-4 focus:outline-none focus:ring focus:border-blue-300">
+                    <button id="searchBtn" class="bg-gray-600 text-white rounded-full w-12 h-12 flex items-center justify-center focus:outline-none focus:ring focus:border-blue-300"><img src="search-icon.jpg" alt="Search icon" class="w-8 h-8 rounded-full"></button>
+                </div>
+                <!-- Error Message Section -->
+                <div id="errorMessage" class="error text-left text-sm mt-2 hidden">
+                    <p>Invalid City Name!</p>
+                </div>
+                <!-- Weather Information Section -->
+                <div id="weatherInfo" class="weather hidden flex flex-col items-center justify-center">
+                    <img src="images/rain.png" alt="Rain" class="weather-icon w-24 h-auto mb-2 mx-auto">
+                    <div class="text-center"> <!-- Added a div for centering -->
+                        <h1 id="temp" class="temp text-5xl font-semibold">22°C</h1>
+                        <h2 id="city" class="city text-2xl font-normal">New York</h2>
+                    </div>
+                    <div class="details flex justify-between items-center mt-4">
+                        <div class="column flex items-center mt-6">
+                            <img src="images/humidity.png" class="w-8 h-auto mr-2">
+                            <div>
+                                <p id="humidity" class="Humidity text-base">50%</p>
+                                <p class="text-xs">Humidity</p>
+                            </div>
+                        </div>
+                        <div class="column flex items-center mt-6">
+                            <img src="images/wind.png" alt="wind" class="w-8 h-auto mr-2">
+                            <div>
+                                <p id="windSpeed" class="Wind text-base">15km/hr</p>
+                                <p class="text-xs">Wind Speed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5-Day Weather Forecast Section -->
+                <div id="forecast" class="forecast mt-6 hidden flex flex-col items-center justify-center">
+                    <h2 class="displayForcast text-2xl font-semibold mb-4 text-center">5-Day Weather Forecast</h2>
+                    <div class="forecast-container grid grid-cols-5 gap-4">
+                        <!-- Forecast items will be added dynamically here -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        
+    <script src="script.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+   /* Styles for desktop screens */
+   @media only screen and (min-width: 1024px) {
+    /* Adjustments for larger screens */
+}
+
+/* Styles for tablet screens */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Adjustments for tablet screens */
+}
+
+/* Styles for mobile screens */
+@media only screen and (max-width: 767px) {
+    /* Adjustments for smaller screens */
+    .phone-box {
+        /* Adjustments for smaller screens */
+        background-color: #4A5568; /* Example color */
+    }
+}
